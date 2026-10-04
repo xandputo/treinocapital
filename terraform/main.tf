@@ -19,6 +19,6 @@ variable "location" {
 }
 
 resource "azurerm_resource_group" "lab" {
-  name     = "rg-plataforma-lab"
-  location = var.location
+  name = "rg-plataforma-lab"
+  location               = var.location
 }
