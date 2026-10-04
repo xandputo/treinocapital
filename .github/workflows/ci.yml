@@ -28,7 +28,7 @@ jobs:
         working-directory: terraform
     steps:
       - name: Baixar o código
-        uses: actions/checkout@2f77a1ec69fb1d595b06f35ab27e97605bdef703
+        uses: actions/checkout@v4
 
       - name: Instalar Terraform
         uses: hashicorp/setup-terraform@v3
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Baixar o código
-        uses: actions/checkout@v4
+        uses: actions/checkout@2f77a1ec69fb1d595b06f35ab27e97605bdef703
         with:
           fetch-depth: 0
 
