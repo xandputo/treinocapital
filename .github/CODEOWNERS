@@ -1,0 +1,8 @@
+# Responsável padrão por todo o repositório
+*                 @xandputo
+
+# Infraestrutura
+/terraform/       @xandputo
+
+# Pipelines e configurações do GitHub
+/.github/         @xandputo
