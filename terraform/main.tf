@@ -30,11 +30,15 @@ variable "acr_name" {
 }
 
 resource "azurerm_container_registry" "acr" {
-  name                = var.acr_name
-  resource_group_name = azurerm_resource_group.lab.name
-  location            = azurerm_resource_group.lab.location
-  sku                 = "Basic"
-  admin_enabled       = false
+  name                          = var.acr_name
+  resource_group_name           = azurerm_resource_group.lab.name
+  location                      = azurerm_resource_group.lab.location
+  sku                           = "Basic"
+  admin_enabled                 = false
+  public_network_access_enabled = true
+  identity {
+    type = "SystemAssigned"
+  }
 }
 
 resource "azurerm_user_assigned_identity" "app" {
