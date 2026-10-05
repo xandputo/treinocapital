@@ -2,17 +2,22 @@
   "name": "plataforma-lab",
   "image": "mcr.microsoft.com/devcontainers/base:bookworm",
   "features": {
-        "ghcr.io/devcontainers/features/terraform:1": {
+    "ghcr.io/devcontainers/features/terraform:1": {
       "tflint": "none",
       "terragrunt": "none"
     },
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
       "moby": false
-    }
+    },
+    "ghcr.io/devcontainers/features/azure-cli:1": {}
   },
+  "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "customizations": {
     "vscode": {
-      "extensions": ["hashicorp.terraform"]
+      "extensions": ["hashicorp.terraform"],
+      "settings": {
+        "files.eol": "\n"
+      }
     }
   }
 }
