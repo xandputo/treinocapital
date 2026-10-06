@@ -90,7 +90,7 @@ resource "azurerm_container_app" "app" {
 
     container {
       name   = "web"
-      image  = "${azurerm_container_registry.acr.login_server}/plataforma-lab:v1"
+      image  = "${azurerm_container_registry.acr.login_server}/plataforma-lab:v2"
       cpu    = 0.25
       memory = "0.5Gi"
     }
