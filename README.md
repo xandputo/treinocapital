@@ -32,4 +32,3 @@ Abra [http://localhost:8080](http://localhost:8080).
 2. Abra esta pasta.
 3. Use **Reopen in Container**.
 
-A página fica em [http://localhost:80](http://localhost:80).
